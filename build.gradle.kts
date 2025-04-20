@@ -69,6 +69,11 @@ kotlin {
                 implementation("io.ktor:ktor-server-auth:$ktorVersion")
                 implementation("io.ktor:ktor-server-compression:$ktorVersion")
                 implementation("ch.qos.logback:logback-classic:$logbackVersion")
+
+                implementation("org.jetbrains.exposed:exposed-core:0.47.0")
+                implementation("org.jetbrains.exposed:exposed-dao:0.47.0")
+                implementation("org.jetbrains.exposed:exposed-jdbc:0.47.0")
+                implementation("com.h2database:h2:2.2.224")
             }
         }
         val jvmTest by getting {
@@ -80,6 +85,7 @@ kotlin {
         val jsMain by getting {
             dependencies {
                 implementation("io.kvision:kvision:$kvisionVersion")
+                implementation("io.kvision:kvision-bootstrap:$kvisionVersion")
                 implementation("io.kvision:kvision-datetime:$kvisionVersion")
                 implementation("io.kvision:kvision-tom-select:$kvisionVersion")
                 implementation("io.kvision:kvision-toastify:$kvisionVersion")
